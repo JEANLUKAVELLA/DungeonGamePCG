@@ -1,0 +1,575 @@
+fileFormatVersion: 2
+guid: 1ba0b88387234d54e9ca784c8197f032
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7303984280810781722
+    second: blue_slime_0
+  - first:
+      213: 6023193914650729891
+    second: blue_slime_1
+  - first:
+      213: -9048537057199944470
+    second: blue_slime_2
+  - first:
+      213: 1783464774199969252
+    second: blue_slime_3
+  - first:
+      213: -8791895251548546637
+    second: blue_slime_4
+  - first:
+      213: 6677950948283176887
+    second: blue_slime_5
+  - first:
+      213: -5881821257850841434
+    second: blue_slime_6
+  - first:
+      213: 1303237626597132602
+    second: blue_slime_7
+  - first:
+      213: 6860097385919781607
+    second: blue_slime_8
+  - first:
+      213: 8573287343081568830
+    second: blue_slime_9
+  - first:
+      213: 2678447312904429022
+    second: blue_slime_10
+  - first:
+      213: -8010067334738877084
+    second: blue_slime_11
+  - first:
+      213: -4804940250644318672
+    second: blue_slime_12
+  - first:
+      213: 575132780742100503
+    second: blue_slime_13
+  - first:
+      213: -20531021687449289
+    second: blue_slime_14
+  - first:
+      213: 5135199770532644094
+    second: blue_slime_15
+  - first:
+      213: -1567978690561327442
+    second: blue_slime_16
+  - first:
+      213: -7264883171638782172
+    second: blue_slime_17
+  - first:
+      213: 2526998548910555664
+    second: blue_slime_18
+  - first:
+      213: 7765830673323106195
+    second: blue_slime_19
+  - first:
+      213: -7031350398931041164
+    second: blue_slime_20
+  - first:
+      213: 2130448837638545830
+    second: blue_slime_21
+  - first:
+      213: -8589729942346835086
+    second: blue_slime_22
+  - first:
+      213: -958696579798035642
+    second: blue_slime_23
+  - first:
+      213: -4767207611822160436
+    second: blue_slime_24
+  - first:
+      213: 4784677826413968945
+    second: blue_slime_25
+  - first:
+      213: 1826256883051928004
+    second: blue_slime_26
+  - first:
+      213: -4586716317681876899
+    second: blue_slime_27
+  - first:
+      213: 4394130173336612915
+    second: blue_slime_28
+  - first:
+      213: 2803156700471423826
+    second: blue_slime_29
+  - first:
+      213: 3630474791199933154
+    second: blue_slime_30
+  - first:
+      213: -712050715880765643
+    second: blue_slime_31
+  - first:
+      213: -3740192741821828370
+    second: blue_slime_32
+  - first:
+      213: 1346173737210072148
+    second: blue_slime_33
+  - first:
+      213: -8164568126443364073
+    second: blue_slime_34
+  - first:
+      213: -9206824257018212130
+    second: blue_slime_35
+  - first:
+      213: -4070063647839189737
+    second: blue_slime_36
+  - first:
+      213: -4404835588170276957
+    second: blue_slime_37
+  - first:
+      213: -2782597541879189441
+    second: blue_slime_38
+  - first:
+      213: -6771845641877923143
+    second: blue_slime_39
+  - first:
+      213: -6207441494263749718
+    second: blue_slime_40
+  - first:
+      213: 4191573601619720023
+    second: blue_slime_41
+  - first:
+      213: -4717291718561045495
+    second: blue_slime_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 0Attack_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 103
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaeb5bd30bb6d3ae0800000000000000
+      internalID: -1567978690561327442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1Attack_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 103
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 427d1c31f33fd2b90800000000000000
+      internalID: -7264883171638782172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2Attack_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 103
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012cdb7aac3b11320800000000000000
+      internalID: 2526998548910555664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3Attack_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 103
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39f914d2ad5c5cb60800000000000000
+      internalID: 7765830673323106195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4Attack_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 103
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4740a6cd010ab6e90800000000000000
+      internalID: -7031350398931041164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5Attack_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 103
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1e6932eefd09d10800000000000000
+      internalID: 2130448837638545830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 0Walk_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 39
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee23738848a281cc0800000000000000
+      internalID: -3740192741821828370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1Walk_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 39
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ccd54b1e19ea210800000000000000
+      internalID: 1346173737210072148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2Walk_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 39
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 711edd6fb80a1be80800000000000000
+      internalID: -8164568126443364073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3Walk_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 39
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0dafa3e1aca3080800000000000000
+      internalID: -9206824257018212130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle0_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 7
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f307a6b474a3269d0800000000000000
+      internalID: -2782597541879189441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle1_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 7
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bad61a74429502a0800000000000000
+      internalID: -6771845641877923143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle2_BlueGoo
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 7
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3a36279dcbad9a0800000000000000
+      internalID: -6207441494263749718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b1ce10f099c76df4d8dbc8fd989ef57e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      0Attack_BlueGoo: -1567978690561327442
+      0Walk_BlueGoo: -3740192741821828370
+      1Attack_BlueGoo: -7264883171638782172
+      1Walk_BlueGoo: 1346173737210072148
+      2Attack_BlueGoo: 2526998548910555664
+      2Walk_BlueGoo: -8164568126443364073
+      3Attack_BlueGoo: 7765830673323106195
+      3Walk_BlueGoo: -9206824257018212130
+      4Attack_BlueGoo: -7031350398931041164
+      5Attack_BlueGoo: 2130448837638545830
+      blue_slime_0: -7303984280810781722
+      blue_slime_1: 6023193914650729891
+      blue_slime_10: 2678447312904429022
+      blue_slime_11: -8010067334738877084
+      blue_slime_12: -4804940250644318672
+      blue_slime_13: 575132780742100503
+      blue_slime_14: -20531021687449289
+      blue_slime_15: 5135199770532644094
+      blue_slime_2: -9048537057199944470
+      blue_slime_22: -8589729942346835086
+      blue_slime_23: -958696579798035642
+      blue_slime_24: -4767207611822160436
+      blue_slime_25: 4784677826413968945
+      blue_slime_26: 1826256883051928004
+      blue_slime_27: -4586716317681876899
+      blue_slime_28: 4394130173336612915
+      blue_slime_29: 2803156700471423826
+      blue_slime_3: 1783464774199969252
+      blue_slime_30: 3630474791199933154
+      blue_slime_31: -712050715880765643
+      blue_slime_36: -4070063647839189737
+      blue_slime_37: -4404835588170276957
+      blue_slime_4: -8791895251548546637
+      blue_slime_41: 4191573601619720023
+      blue_slime_42: -4717291718561045495
+      blue_slime_5: 6677950948283176887
+      blue_slime_6: -5881821257850841434
+      blue_slime_7: 1303237626597132602
+      blue_slime_8: 6860097385919781607
+      blue_slime_9: 8573287343081568830
+      idle0_BlueGoo: -2782597541879189441
+      idle1_BlueGoo: -6771845641877923143
+      idle2_BlueGoo: -6207441494263749718
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
