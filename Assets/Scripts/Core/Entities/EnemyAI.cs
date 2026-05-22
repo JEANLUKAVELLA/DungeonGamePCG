@@ -70,7 +70,7 @@ namespace DungeonGame.Core.Entities
 
         private void Start()
         {
-            // I auto-corrected the EnemyType in case the inspector dropdown wasn't changed from the default
+            // Setting EnemyType in the inspector dropdown, only just to make sure if an enemy wasnt set and this script is acting as my backup clearance
             if (gameObject.name.Contains("Hot") && enemyType != EnemyType.Hot)
             {
                 Debug.LogWarning($"[Auto-Fix] Changed {gameObject.name}'s type from {enemyType} to Hot!"); // for testing purposes
@@ -85,14 +85,14 @@ namespace DungeonGame.Core.Entities
                 enemyType = EnemyType.Dirt;
             }
 
-            // I found the player reference in the scene by tag
+            // Finding the player reference in the scene by tag
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null)
             {
                 playerTarget = player.transform;
             }
 
-            // I registered this enemy with the ScoreManager to track remaining enemies
+            // Registering this enemy with the ScoreManager to track remaining enemies
             if (ScoreManager.Instance != null)
             {
                 ScoreManager.Instance.RegisterEnemy();
@@ -120,7 +120,7 @@ namespace DungeonGame.Core.Entities
 
             if (isBossLevel)
             {
-                // I set boss level enemy damage to their highest limit (making them more dangerous!)
+                // Setting boss level enemy damage to their highest limit (giving the player more of a challenge)
                 attackDamage = enemyType switch
                 {
                     EnemyType.Ocean => 8f,
@@ -132,7 +132,7 @@ namespace DungeonGame.Core.Entities
             }
             else
             {
-                // I scaled base damage with the difficulty multiplier and clamped it for non-boss levels
+                // Scailing the base damage with the difficulty multiplier and clamped it for non-boss levels
                 attackDamage = enemyType switch
                 {
                     EnemyType.Ocean => Mathf.Clamp(5f * multiplier, 2f, 8f),
@@ -143,20 +143,18 @@ namespace DungeonGame.Core.Entities
                 Debug.Log($"[Level {currentLevel}] {gameObject.name} ({enemyType}) attack damage set to: {attackDamage:F1} (Multiplier: {multiplier:F2})"); // for testing purposes
             }
 
-            // --- SPEED SCALING ---
+            // --- SPEED SCALING - here am making a distinct walk difference between the Dirt enemy and Hot & Ocean enemies ---
             if (enemyType == EnemyType.Dirt)
             {
-                // I scaled Dirt skeleton speed from 3.0 up to 3.5 max based on difficulty
                 characterMovement.baseSpeed = Mathf.Clamp(3f * multiplier, 3f, 3.5f);
             }
             else
             {
-                // I kept Ocean and Hot enemies at standard speed
                 characterMovement.baseSpeed = 2f;
             }
             
-            // I scaled ranged damage for Hot enemies
-            rangedDamage = Mathf.Clamp(attackDamage * 0.5f, 5f, 10f); // I set this to half of melee damage
+            // scaled ranged damage for Hot enemies
+            rangedDamage = Mathf.Clamp(attackDamage * 0.5f, 5f, 10f);
         }
 
         private void Update()
@@ -184,10 +182,9 @@ namespace DungeonGame.Core.Entities
                 }
             }
 
-            // I decided the current state: Attack, Shoot, Chase, or Wander
+            // Deciding the current state: Attack, Shoot, Chase, or Wander
             if (playerTarget != null && isPlayerAlive && distanceToPlayer <= attackRadius)
             {
-                // I stopped movement and attempted a melee attack since the cooldown completed
                 characterMovement.SetMovement(Vector2.zero);
                 
                 if (Time.time >= lastAttackTime + attackCooldown)
@@ -198,15 +195,14 @@ namespace DungeonGame.Core.Entities
             }
             else if (enemyType == EnemyType.Hot && playerTarget != null && isPlayerAlive && distanceToPlayer <= detectionRadius && distanceToPlayer > meleeChaseRadius)
             {
-                // I handled ranged attacks for Hot enemies (shooting from afar)
+                // Handling ranged attacks for Hot enemies (shooting from afar)
                 Vector2 directionToPlayer = (playerTarget.position - transform.position).normalized;
                 
-                // I used a raycast to check for walls blocking the shot
+                // here i am making sure that bullets cannot be shot if there is a wall between the enemy and the player by using the raycast and a message between the enemy and the wall "Wall"
                 RaycastHit2D[] lineOfSightHits = Physics2D.RaycastAll(transform.position, directionToPlayer, distanceToPlayer);
                 bool wallBlocks = false;
                 foreach (var hit in lineOfSightHits)
                 {
-                    // I only blocked shots if they specifically hit the WallTilemap or a Wall object
                     if (hit.collider.gameObject.name.Contains("Wall"))
                     {
                         wallBlocks = true;
@@ -216,7 +212,7 @@ namespace DungeonGame.Core.Entities
                 
                 if (!wallBlocks)
                 {
-                    // I confirmed line of sight, so I stopped moving and started shooting
+                    // For HotEnemy after a confirmed line of sight, the enemy stops moving and starts shooting
                     characterMovement.SetMovement(Vector2.zero); 
                     
                     if (Time.time >= lastShotTime + shootingCooldown)
@@ -227,19 +223,16 @@ namespace DungeonGame.Core.Entities
                 }
                 else
                 {
-                    // I kept chasing since a wall was blocking my shot
                     characterMovement.SetMovement(directionToPlayer);
                 }
             }
             else if (distanceToPlayer <= detectionRadius)
             {
-                // I moved towards the player in chase mode
                 Vector2 chaseDirection = (playerTarget.position - transform.position).normalized;
                 characterMovement.SetMovement(chaseDirection);
             }
             else
             {
-                // I wandered randomly around the zone since no player was detected
                 UpdateWander();
             }
         }
@@ -284,7 +277,7 @@ namespace DungeonGame.Core.Entities
             
             // I checked if the player is still in range to take damage
             float currentDistance = Vector2.Distance(transform.position, playerTarget.position);
-            if (playerTarget != null && currentDistance <= attackRadius + 0.5f) // I added a slightly more lenient tolerance for the hit check
+            if (playerTarget != null && currentDistance <= attackRadius + 0.5f)
             {
                 Health playerHealth = playerTarget.GetComponent<Health>();
                 if (playerHealth != null)
@@ -300,13 +293,13 @@ namespace DungeonGame.Core.Entities
         }
 
         /// <summary>
-        /// Fires a projectile towards the player.
+        /// Fires a projectile towards the player (HotEnemy only).
         /// </summary>
         private void PerformRangedAttack(Vector2 direction)
         {
             if (projectilePrefab == null) return;
 
-            // I spawned the projectile slightly in front of the enemy to avoid self-hits
+            // Spawning the projectile slightly in front of the enemy to avoid immediate collisions with itself
             Vector2 spawnPos = (Vector2)transform.position + (direction * 0.5f);
             GameObject bulletObj = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
             
@@ -321,14 +314,14 @@ namespace DungeonGame.Core.Entities
         /// <summary>
         /// Handles death logic, giving score, unregistering the enemy, and destroying the GameObject.
         /// </summary>
+
+        // Disabled the enemy collider, destroyed the enemy object after a short delay, and disabled this script to stop all behavior immediately.
         private void HandleDeath()
         {
             if (isDead) return;
             isDead = true;
 
             characterMovement.Die();
-            
-            // I disabled the collider so it doesn't block the player or receive extra hits
             Collider2D enemyCollider = GetComponent<Collider2D>();
             if (enemyCollider != null) enemyCollider.enabled = false;
 
@@ -337,11 +330,7 @@ namespace DungeonGame.Core.Entities
                 ScoreManager.Instance.AddScore(scoreValue);
                 ScoreManager.Instance.UnregisterEnemy();
             }
-
-            // I destroyed the object after a small delay to allow the death effect to play
             Destroy(gameObject, 0.5f); 
-
-            // I disabled this AI script component
             this.enabled = false;
         }
         

@@ -239,21 +239,21 @@ namespace DungeonGame.Systems.Dungeon
         {
             Debug.Log($"[Difficulty] Floor Finished in {timeTaken:F1}s (Target: {targetTimeLimit}s), Health Remaining: {healthRemaining:F1}"); // for testing purposes
 
-            // I calculated the difficulty scaling factor:
-            // Lesser time means I performed better -> increase difficulty
-            // Higher health remaining means I performed better -> increase difficulty
+            // Calculating the difficulty scaling factor:
+            // Lesser time means player performed better -> increase difficulty
+            // Higher health remaining means player performed better -> increase difficulty
             float timeFactor = targetTimeLimit / Mathf.Max(1f, timeTaken);
             float healthFactor = Mathf.Max(1f, healthRemaining) / targetDamageLimit;
 
-            // I clamped individual factors to prevent extreme scaling
+            // Clamping individual factors to prevent extreme scaling
             timeFactor = Mathf.Clamp(timeFactor, 0.5f, 2.0f);
             healthFactor = Mathf.Clamp(healthFactor, 0.5f, 2.0f);
 
-            // I calculated the overall performance multiplier
+            // Calculating the overall performance multiplier
             float performanceMultiplier = (timeFactor + healthFactor) / 2f;
             CurrentDifficultyMultiplier = performanceMultiplier;
 
-            // I applied scaling to dungeon parameters
+            // Applying scaling to dungeon parameters
             maxRooms = Mathf.Clamp(Mathf.RoundToInt(maxRooms * performanceMultiplier), 5, 20);
             enemySpawnsPerRoom = Mathf.Clamp(Mathf.RoundToInt(enemySpawnsPerRoom * performanceMultiplier), 1, 5);
             trapsPerRoom = Mathf.Clamp(Mathf.RoundToInt(trapsPerRoom * performanceMultiplier), 1, 8);
@@ -273,8 +273,8 @@ namespace DungeonGame.Systems.Dungeon
         /// Transition process coroutine managing player input locking, countdown displays, scaling, and scene generation.
         /// </summary>
         private IEnumerator LevelTransitionCoroutine()
+            //this section is when player finished the level its does these action for current level and to the next level
         {
-            // 1. Pause player input/movement
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             PlayerController playerCtrl = null;
             CharacterMovement characterMove = null;
@@ -307,7 +307,6 @@ namespace DungeonGame.Systems.Dungeon
                 yield return new WaitForSeconds(3f);
             }
 
-            // 3. Stop timer and gather level performance metrics
             float timeTaken = 0f;
             float healthRemaining = 100f;
 
@@ -327,32 +326,26 @@ namespace DungeonGame.Systems.Dungeon
                 }
             }
 
-            // 4. Adjust and scale the next dungeon's difficulty
             ScaleDifficulty(timeTaken, healthRemaining);
 
-            // Increment level count in ScoreManager
             if (ScoreManager.Instance != null)
             {
                 ScoreManager.Instance.IncrementLevel();
             }
 
-            // 5. Generate the new level structure
             GenerateDungeon();
 
-            // 6. Heal player back to full health and reset level stats
             if (playerHealth != null)
             {
                 playerHealth.ResetHealth();
             }
 
-            // Configure Player Damage for the new level
             if (playerCtrl != null)
             {
                 PlayerController pc = playerCtrl as PlayerController;
                 if (pc != null) pc.ConfigureDamage();
             }
 
-            // 7. Restart background level timer
             if (ScoreManager.Instance != null)
             {
                 ScoreManager.Instance.ResetLevelTime();
@@ -389,6 +382,7 @@ namespace DungeonGame.Systems.Dungeon
         /// Places all decorations, collectible key crystals, spawner/exit portal paintings, spikes, and biome-specific interactive props.
         /// </summary>
         private void GenerateProps()
+        //this section is responsible for populating the generated rooms with various props and hazards, while ensuring logical placement and avoiding conflicts with player spawn points and exits.
         {
             if (roomNodes.Count == 0) return;
             safeTiles.Clear();
@@ -878,7 +872,7 @@ namespace DungeonGame.Systems.Dungeon
         }
 
         /// <summary>
-        /// Helper mapping a corridor tile position to a Normal floor walkable.
+        /// Helper mapping a corridor tile position to a Normal floor.
         /// </summary>
         private void SetCorridorFloorTile(Vector3Int pos, BiomePalette palette)
         {
